@@ -1,6 +1,6 @@
 <idea-plugin>
-    <id>org.example.miserutv</id>
-    <name>Plugin display name here</name>
+    <id>com.miserutv.templates</id>
+    <name>Hello World Template</name>
     <vendor email="support@yourcompany.com"
             url="http://www.yourcompany.com">
         YourCompany
@@ -14,9 +14,13 @@
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
+    <extensions defaultExtensionNs="com.android">
         <!-- Add your extensions here -->
+        <tools.idea.wizard.template.wizardTemplateProvider
+            implementation="com.miserutv.templates.recipes.HelloWorldTemplateWizardProvider"/>
     </extensions>
 
     <actions>
